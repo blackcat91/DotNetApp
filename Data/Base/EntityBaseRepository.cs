@@ -49,7 +49,7 @@ namespace MVCIntermediate.Data.Base
             T exist = await _db.Set<T>().FirstOrDefaultAsync(a => a.Id == id);
             if (exist != null && entity != null)
             {
-                _db.Set<T>().Update(entity);
+                exist = entity;
                 await _db.SaveChangesAsync();
             }
             return entity;
