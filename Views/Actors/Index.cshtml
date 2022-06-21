@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Actor>
+
+<div class="container">
+    @foreach (var actor in Model.AsEnumerable())
+    {
+        <div class="row p-2">
+            <div class="col-3 p-3 m-auto">
+                <img src="@actor.ProfilePicURL" width="100%" />
+                </div>
+            <div class="col-5 p-3 m-auto">
+
+                <h3>@actor.FullName</h3>
+                
+            </div>
+        </div>
+    }
+</div>
